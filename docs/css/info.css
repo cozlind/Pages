@@ -27,6 +27,9 @@ div#desc{
 div#basic{
 	margin-top:150px;
 }
+iframe{
+	margin-bottom:22px;
+}
 img#capture{
 	margin-bottom:22px;
 }
