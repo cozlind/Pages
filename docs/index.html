@@ -29,8 +29,8 @@ window.onload = function() {
 		// cross-browser wheel delta
 		var e = window.event || e;
 		var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
-		var pageNum=2;
-		var sensitive=2;
+		var pageNum=1;
+		var sensitive=1;
 		count+=pageNum-delta/sensitive;
 		count%=pageNum;
 		<!-- p.innerHTML =  count; -->
@@ -168,26 +168,12 @@ window.onload = function() {
 			<div id="caption"><h2 id="title">Sudden Justice</h2><h2 id="caption">3d drone game</h2></div>
 			</a>
 		</div>
-	</div>
-	<div id="page1">
-		<div id="grid"></div>
-		<div id="grid"></div>
-		<div id="grid"></div>
-		<div id="grid"></div>
-		<div id="grid"></div>
-		<div id="grid"></div>
-		<div id="grid"></div>
-		<div id="grid"></div>
-		<div id="grid"></div>
-		<div id="grid"></div>
-		<div id="grid"></div>
-		<div id="grid"></div>
-		<div id="grid"></div>
-		<div id="grid"></div>
-		<div id="grid"></div>
-		<div id="grid"></div>
-		<div id="grid"></div>	
-		<div id="grid"></div>
+		<div id="grid">
+			<a href="images/monody/1.jpg">
+			<div id="img"><img id="project" src="images/bleedforfreedom/1.jpg" alt="Bleed For Freedom" height="100%" ></div>
+			<div id="caption"><h2 id="title">Bleed For Freedom</h2><h2 id="caption">2d turn-based game</h2></div>
+			</a>
+		</div>
 	</div>
 </div>
 </body>
