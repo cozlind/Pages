@@ -51,17 +51,32 @@ div#content{
 }
 div#grid{
 	display: inline-block;
-	background-color:white;
 	width:210px;
-	height:210px;
-	margin-bottom:80px;
+	height:280px;
+	margin-bottom:10px;
 	margin-left:25px;
 	overflow:hidden;
 }
+div#img{
+	background-color:#e9eaf0;
+	display: block;
+	width:100%;
+	height:210px;
+	overflow:hidden;
+}
+div#caption{
+	width:100%;
+	height:70px;
+	overflow:hidden;
+	text-align:center;
+}
 div#page0{
+	padding-top:70px;
+	height:100%;
 }
 div#page1{
-	margin-top:200px;
+	padding-top:70px;
+	height:100%;
 }
 a{
 	font-size: 8pt;
@@ -83,8 +98,8 @@ a:active {
 	color:white;
 } 
 img#project{
-  -webkit-filter: grayscale(80%) contrast(1.2);
-  filter:   grayscale(80%) contrast(1.2) ;
+  -webkit-filter: grayscale(80%)  opacity(0.8);
+  filter:   grayscale(80%) opacity(0.8) ;
 }
 img#project:link {
 }
@@ -93,13 +108,13 @@ img#project:visited {
 }
 
 img#project:hover{
-  -webkit-filter: grayscale(0) saturate(1.2) opacity(0.8);
-  filter:   grayscale(0) saturate(1.2) opacity(0.8);
+  -webkit-filter: grayscale(0) saturate(1.2) ;
+  filter:   grayscale(0) saturate(1.2) ;
 }
 
 img#project:active {
-  -webkit-filter: opacity(0.1);
-  filter:   opacity(0.1);
+  -webkit-filter: opacity(0.1) saturate(4) ;
+  filter:   opacity(0.1) saturate(4) ;
 } 
 h1 {
 	font-size: 18pt;
@@ -111,4 +126,18 @@ h2 {
 	font-size: 8pt;
     color:lightgrey;
     text-align: left;
+}
+h2#title{
+	font-family:Trebuchet MS, Helvetica, sans-serif;
+	font-size: 8pt;
+    color:grey;
+	text-align:center;
+}
+h2#title:hover{
+	color:#f1a0a0;
+}
+h2#caption{
+	font-size: 8pt;
+    color:lightgrey;
+	text-align:center;
 }

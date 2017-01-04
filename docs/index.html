@@ -29,12 +29,12 @@ window.onload = function() {
 		// cross-browser wheel delta
 		var e = window.event || e;
 		var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
-		count+=delta;
-		p.innerHTML =  count;
-		if(delta>0)
-		location.href = "#page0";
-		if(delta<0)
-		location.href = "#page1";
+		var pageNum=2;
+		var sensitive=2;
+		count+=pageNum-delta/sensitive;
+		count%=pageNum;
+		<!-- p.innerHTML =  count; -->
+		location.href="#page"+count;
 		e.preventDefault();
 		return false;
 	}
@@ -45,7 +45,7 @@ window.onload = function() {
 <body>
 <div id="left">
 	<div id="head">
-	<p id="output"></p>
+	<!-- <p id="output"></p> -->
 		<h1>Chen Zuo</h1>
 	</div>
 	<div id="bio">
@@ -66,24 +66,102 @@ window.onload = function() {
 </div>
 <div id="content">
 	<div id="page0">
-		<div id="grid"><a href="images/justask/1.jpg"><img id="project" src="images/justask/1.jpg" alt="JustAsk!" height="100%" ></a></div>
-		<div id="grid"><a href="#"><img id="project" src="images/MDNID/4.jpg" alt="MDNID" height="100%" style="margin-left:-40%"></a></div>
-		<div id="grid"><a href="#"><img id="project" src="images/cupi/1.jpg" alt="Cupi" height="100%"></a></div>
-		<div id="grid"><a href="#"><img id="project" src="images/sadgis/1.jpg" alt="SADGIS" height="100%" style="margin-left:-40%"></a></div>
-		<div id="grid"><a href="#"><img id="project" src="images/satry/1.jpg" alt="Satry Renderer" height="100%" ></a></div>
-		<div id="grid"><a href="#"><img id="project" src="images/lala/1.jpg" alt="LALA" height="100%" style="margin-left:-10%"></a></div>
-		<div id="grid"><a href="#"><img id="project" src="images/noiseterrain/1.jpg" alt="Noise Terrain" height="100%" ></a></div>
-		<div id="grid"><a href="#"><img id="project" src="images/envasion/1.jpg" alt="Envasion" height="100%" ></a></div>
-		<div id="grid"></div>
-		<div id="grid"></div>
-		<div id="grid"></div>
-		<div id="grid"></div>
-		<div id="grid"></div>
-		<div id="grid"></div>
-		<div id="grid"></div>
-		<div id="grid"></div>	
-		<div id="grid"></div>
-		<div id="grid"></div>
+		<div id="grid">
+			<a href="#">
+			<div id="img"><img id="project" src="images/justask/1.jpg" alt="JustAsk!" height="100%" ></div>
+			<div id="caption"><h2 id="title">JustAsk!</h2><h2 id="caption">java, web</h2></div>
+			</a>
+		</div>
+		<div id="grid">
+			<a href="#">
+			<div id="img"><img id="project" src="images/MDNID/4.jpg" alt="MDNID" height="100%" style="margin-left:-40%" ></div>
+			<div id="caption"><h2 id="title">MDN Intelligent Decoration</h2><h2 id="caption">app, desktop, VR</h2></div>
+			</a>
+		</div>
+		<div id="grid">
+			<a href="#">
+			<div id="img"><img id="project" src="images/cupi/1.jpg" alt="Cupi" height="100%" ></div>
+			<div id="caption"><h2 id="title">Cupi</h2><h2 id="caption">2d puzzle game</h2></div>
+			</a>
+		</div>
+		<div id="grid">
+			<a href="#">
+			<div id="img"><img id="project" src="images/sadgis/1.jpg" alt="SADGIS" height="100%" style="margin-left:-40%"></div>
+			<div id="caption"><h2 id="title">SADGIS</h2><h2 id="caption">ArcGIS, simulation</h2></div>
+			</a>
+		</div>
+		<div id="grid">
+			<a href="#">
+			<div id="img"><img id="project" src="images/satry/1.jpg" alt="Satry Renderer" height="100%"></div>
+			<div id="caption"><h2 id="title">Satry Renderer</h2><h2 id="caption">software rasterization, renderer based on CPU</h2></div>
+			</a>
+		</div>
+		<div id="grid">
+			<a href="#">
+			<div id="img"><img id="project" src="images/lala/1.jpg" alt="LALA" height="100%" style="margin-left:-10%"></div>
+			<div id="caption"><h2 id="title">LALA</h2><h2 id="caption">3d puzzle game</h2></div>
+			</a>
+		</div>
+		<div id="grid">
+			<a href="#">
+			<div id="img"><img id="project" src="images/noiseterrain/1.jpg" alt="Noise Terrain" height="100%"></div>
+			<div id="caption"><h2 id="title">Noise Terrain</h2><h2 id="caption">procedural generation, perlin noise, lod</h2></div>
+			</a>
+		</div>
+		<div id="grid">
+			<a href="#">
+			<div id="img"><img id="project" src="images/envasion/1.jpg" alt="Envasion" height="100%"></div>
+			<div id="caption"><h2 id="title">Envasion</h2><h2 id="caption">2d RTS game</h2></div>
+			</a>
+		</div>
+		<div id="grid">
+			<a href="#">
+			<div id="img"><img id="project" src="images/monody/1.jpg" alt="Monody" height="100%"></div>
+			<div id="caption"><h2 id="title">Monody</h2><h2 id="caption">2d platform, music game, action game</h2></div>
+			</a>
+		</div>
+		<div id="grid">
+			<a href="images/justask/1.jpg">
+			<div id="img"><img id="project" src="images/shapematching/1.gif" alt="Shape Matching" height="100%" style="margin-left:-35%"></div>
+			<div id="caption"><h2 id="title">Shape Matching</h2><h2 id="caption">cg practice, physics</h2></div>
+			</a>
+		</div>
+		<div id="grid">
+			<a href="images/justask/1.jpg">
+			<div id="img"><img id="project" src="images/marchingcubes/1.jpg" alt="Marching Cubes" height="100%" ></div>
+			<div id="caption"><h2 id="title">Marching Cubes</h2><h2 id="caption">procedural generation, marching tetrahedra</h2></div>
+			</a>
+		</div>
+		<div id="grid">
+			<a href="images/justask/1.jpg">
+			<div id="img"><img id="project" src="images/inversekinematics/1.gif" alt="Inverse Kinematics" height="100%" style="margin-left:-30%"></div>
+			<div id="caption"><h2 id="title">Inverse Kinematics</h2><h2 id="caption">cg practice, physics</h2></div>
+			</a>
+		</div>
+		<div id="grid">
+			<a href="images/justask/1.jpg">
+			<div id="img"><img id="project" src="images/pbd/1.gif" alt="Position Based Dynamics" height="100%" style="margin-left:-20%"></div>
+			<div id="caption"><h2 id="title">Position Based Dynamics</h2><h2 id="caption">cg practice, physics</h2></div>
+			</a>
+		</div>
+		<div id="grid">
+			<a href="images/monody/1.jpg">
+			<div id="img"><img id="project" src="images/km/1.jpg" alt="KMO6970K" height="100%" ></div>
+			<div id="caption"><h2 id="title">KMO6970K</h2><h2 id="caption">3d ACT game, soul-like</h2></div>
+			</a>
+		</div>
+		<div id="grid">
+			<a href="images/monody/1.jpg">
+			<div id="img"><img id="project" src="images/blue/icon.jpg" alt="Blue" height="100%" style="margin-left:-20%"></div>
+			<div id="caption"><h2 id="title">Blue</h2><h2 id="caption">2d platform, puzzle game</h2></div>
+			</a>
+		</div>
+		<div id="grid">
+			<a href="images/monody/1.jpg">
+			<div id="img"><img id="project" src="images/ns/1.jpg" alt="Navier-Stroke Fluid" height="100%" style="margin-left:-20%"></div>
+			<div id="caption"><h2 id="title">Navier-Stroke Fluid</h2><h2 id="caption">cg practice, fluid simulation</h2></div>
+			</a>
+		</div>
 	</div>
 	<div id="page1">
 		<div id="grid"></div>
