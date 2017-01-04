@@ -26,24 +26,20 @@ window.onload = function() {
 	
 	var count=0;
 	function MouseWheelHandler(e) {
-
 		// cross-browser wheel delta
 		var e = window.event || e;
 		var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
 		count+=delta;
 		p.innerHTML =  count;
+		if(delta>0)
+		location.href = "#page0";
+		if(delta<0)
+		location.href = "#page1";
+		e.preventDefault();
 		return false;
 	}
 
 }
-</script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script>
-$(document).ready(function(){
-    $("#output").click(function(){
-        $(this).hide();
-    });
-});
 </script>
 </head>
 <body>
