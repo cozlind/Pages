@@ -1,28 +1,60 @@
 div#middle{
 	display:inline-block;
-	background-color:red;
 	font-family:Trebuchet MS, Helvetica, sans-serif;
 	margin:0;
 	width:45%;
 	height:100%;
-	overflow-x:hidden;
-	overflow-y:auto;
+	overflow-x:hidden; 
+	vertical-align:top;
 }
 div#right{
 	display:inline-block;
-	background-color:pink;
 	font-family:Trebuchet MS, Helvetica, sans-serif;
 	margin:0;
-	width:48%;
+	width:45%;
 	height:100%;
-	padding-left:2%;
-	padding-right:3%;
-	overflow:auto;
+	padding-left:3%;
+	padding-right:5%;
+	overflow-x:hidden;
+	vertical-align:top;
 }
 div#page0{
 	padding-top:70px;
-	height:100%;
+	padding-bottom:70px;
+}
+div#desc{
+}
+div#basic{
+	margin-top:150px;
 }
 img#capture{
-	margin-bottom:25px;
+	margin-bottom:22px;
+}
+p{
+	color:#404040;
+	font-family:Verdana;
+	font-size:10pt;
+}
+p#section{
+	font-family:Arial;
+	color:#ababab;
+	font-size:8pt;
+}
+p#secontent{
+	font-family:Arial;
+	font-size:9pt;
+}
+h1#title{
+	font-family:Arial;
+    font-weight: lighter;
+	margin-bottom:40px;
+	margin-top:0;
+}
+li{
+	color:#404040;
+	font-family:Verdana;
+	font-size:10pt;
+}
+ul{
+	list-style-type:square;
 }
