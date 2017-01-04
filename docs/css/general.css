@@ -48,9 +48,9 @@ div#content{
 	padding-bottom:70px;
 	padding-top:70px;
 	width:75%;
-	height:700px;
-	overflow-y:hidden;
-	overflow-x:auto;
+	height:100%;
+	overflow-y:auto;
+	overflow-x:hidden;
 }
 div#grid{
 	display: inline-block;
