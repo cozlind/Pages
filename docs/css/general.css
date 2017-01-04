@@ -75,24 +75,24 @@ a:hover {
 a:active {
 	color:white;
 } 
+img#project{
+  -webkit-filter: grayscale(80%) contrast(1.2);
+  filter:   grayscale(80%) contrast(1.2) ;
+}
 img#project:link {
-    opacity: 1;
-	filter: alpha(opacity=100);
 }
 
 img#project:visited {
-    opacity: 1;
-	filter: alpha(opacity=100);
 }
 
 img#project:hover{
-    opacity: 0.2;
-	filter: alpha(opacity=20);
+  -webkit-filter: grayscale(0) saturate(1.2) opacity(0.8);
+  filter:   grayscale(0) saturate(1.2) opacity(0.8);
 }
 
 img#project:active {
-    opacity: 0;
-	filter: alpha(opacity=0);
+  -webkit-filter: opacity(0.1);
+  filter:   opacity(0.1);
 } 
 h1 {
 	font-size: 18pt;
