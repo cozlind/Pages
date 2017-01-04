@@ -11,10 +11,37 @@
 
 	<title>Lind Chen</title>
 	<link rel="stylesheet" type="text/css" href="css/general.css">
+	<script>
+window.onload = function() {
+
+	var p = document.getElementById("output");
+	
+	var area=document.getElementById("content");
+	
+	if (area.addEventListener) {
+		area.addEventListener("mousewheel", MouseWheelHandler, false);
+		area.addEventListener("DOMMouseScroll", MouseWheelHandler, false);
+	}
+	else area.attachEvent("onmousewheel", MouseWheelHandler);
+	
+	var count=0;
+	function MouseWheelHandler(e) {
+
+		// cross-browser wheel delta
+		var e = window.event || e;
+		var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
+		count+=delta;
+		p.innerHTML =  count;
+		return false;
+	}
+
+}
+</script>
 </head>
 <body>
 <div id="left">
 	<div id="head">
+	<p id="output"></p>
 		<h1>Chen Zuo</h1>
 	</div>
 	<div id="bio">
@@ -34,7 +61,7 @@
 	</div>
 </div>
 <div id="content">
-	<div id="page0"><img id="squirrel" src="images/justask/1.jpg" alt="a squirrel" />
+	<div id="page0">
 		<div id="grid"><a href="images/justask/1.jpg"><img id="project" src="images/justask/1.jpg" alt="JustAsk!" height="100%" ></a></div>
 		<div id="grid"><a href="#"><img id="project" src="images/MDNID/4.jpg" alt="MDNID" height="100%" style="margin-left:-40%"></a></div>
 		<div id="grid"><a href="#"><img id="project" src="images/cupi/1.jpg" alt="Cupi" height="100%"></a></div>
@@ -75,38 +102,5 @@
 		<div id="grid"></div>
 	</div>
 </div>
-	<script>
-window.onload = function() {
-
-	var sq = {};
-	sq.e = document.getElementById("squirrel");
-	if (sq.e.naturalWidth) {
-		sq.nw = sq.e.naturalWidth;
-	}
-	else {
-		var i = new Image();
-		i.src = sq.e.src;
-		sq.nw = i.width;
-	}
-	sq.zoom = 30;
-	
-	if (sq.e.addEventListener) {
-		sq.e.addEventListener("mousewheel", MouseWheelHandler, false);
-		sq.e.addEventListener("DOMMouseScroll", MouseWheelHandler, false);
-	}
-	else sq.e.attachEvent("onmousewheel", MouseWheelHandler);
-	
-	function MouseWheelHandler(e) {
-
-		// cross-browser wheel delta
-		var e = window.event || e;
-		var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
-		sq.e.style.width = Math.max(sq.zoom, Math.min(sq.nw, sq.e.width + (sq.zoom * delta))) + "px";
-
-		return false;
-	}
-
-}
-</script>
 </body>
 </html>
