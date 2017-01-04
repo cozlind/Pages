@@ -55,9 +55,13 @@ h1#title{
 }
 li{
 	color:#404040;
-	font-family:Verdana;
-	font-size:10pt;
 }
 ul{
+	font-family:Arial;
 	list-style-type:square;
+	font-size:9pt;
+}
+ol{
+	font-family:Verdana;
+	font-size:10pt;
 }
