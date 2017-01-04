@@ -45,6 +45,7 @@ div#content{
 	font-family:Trebuchet MS, Helvetica, sans-serif;
 	margin-left:22%;
 	margin-top:0;
+	padding:0;
 	width:78%;
 	height:100%;
 	overflow:auto;
