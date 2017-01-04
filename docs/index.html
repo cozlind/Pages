@@ -17,23 +17,14 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="js/scrolloverflow.js"></script>
 	<script type="text/javascript" src="js/jquery.fullPage.js"></script>
-	<script type="text/javascript">
-		$(document).ready(function() {
-			$('#fullpage').fullpage({
-				anchors: ['firstPage', 'secondPage', '3rdPage'],
-				menu: '#menu',
-				continuousVertical: true,
-				navigation: true,
-				navigationPosition: 'right',
-			});
-		});
-	</script>
+
 </head>
-<body><script>
+<body>
+<p id="demo"></p>
+<script>
 document.getElementById("demo").innerHTML =
     "Hello Dolly.";
 </script>
-<p id="demo"></p>
 <div id="left">
 	<div id="head">
 		<h1>Chen Zuo</h1>
@@ -117,5 +108,17 @@ document.getElementById("demo").innerHTML =
 		</div>
 	</div>
 </div>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				anchors: ['firstPage', 'secondPage', '3rdPage'],
+				menu: '#menu',
+				continuousVertical: true,
+				navigation: true,
+				navigationPosition: 'right',
+			});
+		});
+	</script>
 </body>
 </html>
