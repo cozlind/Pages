@@ -29,9 +29,11 @@ div#basic{
 }
 iframe{
 	margin-bottom:22px;
+	border-radius:5px;
 }
 img#capture{
 	margin-bottom:22px;
+	border-radius:5px;
 }
 p{
 	color:#404040;
