@@ -57,6 +57,7 @@ li{
 	color:#404040;
 }
 ul{
+	list-style-position: outside;
 	font-family:Arial;
 	list-style-type:square;
 	font-size:9pt;
