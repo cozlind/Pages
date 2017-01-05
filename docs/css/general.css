@@ -81,4 +81,9 @@ h2 {
     color:lightgrey;
     text-align: left;
 }
-
+img#icon{
+	width: 20px;
+	height: 20px;
+	-webkit-filter: opacity(0.4);
+	filter:  opacity(0.4);
+}
