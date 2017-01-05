@@ -29,11 +29,11 @@ div#basic{
 }
 iframe{
 	margin-bottom:22px;
-	border-radius:5px;
+	border-radius:10px;
 }
 img#capture{
 	margin-bottom:22px;
-	border-radius:5px;
+	border-radius:10px;
 }
 p{
 	color:#404040;
